@@ -8,6 +8,8 @@
 
 #import "AddressBookController.h"
 #import "OrderHisModel.h"
+#import "AddressHisModel.h"
+#import "CGlobal.h"
 
 @interface AddressBookController ()
 
@@ -48,6 +50,8 @@
                         [CGlobal AlertMessage:@"No Address" Title:nil];
                     }else{
                         [self filterData];
+                        [self addViews];
+                
                         [CGlobal stopIndicator:self];
                     }
                     
@@ -65,9 +69,31 @@
 
 -(Boolean)containsSource:(OrderHisModel*)model{
     for(int i = 0; i < self.addresses.count ; i++){
-        OrderHisModel* orderHisModel = self.addresses[i];
-        if([orderHisModel key)
+        AddressHisModel* hisModel = self.addresses[i];
+        if( [hisModel.address isEqualToString:model.addressModel.sourceAddress] )
+            return true;
     }
+    
+    if([g_addressModel.sourceAddress isEqualToString:model.addressModel.sourceAddress])
+        return true;
+    if([g_addressModel.desAddress isEqualToString:model.addressModel.sourceAddress])
+        return true;
+        
+    return false;
+}
+-(Boolean)containsDes:(OrderHisModel*)model{
+    for(int i = 0; i < self.addresses.count ; i++){
+        AddressHisModel* hisModel = self.addresses[i];
+        if( [hisModel.address isEqualToString:model.addressModel.desAddress ] )
+            return true;
+    }
+    
+    if([g_addressModel.sourceAddress isEqualToString:model.addressModel.desAddress])
+        return true;
+    if([g_addressModel.desAddress isEqualToString:model.addressModel.desAddress])
+        return true;
+    
+    return false;
 }
 
 -(void)filterData{
@@ -81,43 +107,45 @@
     self.data_2 = [[NSMutableArray alloc] init];
     for (int i=0; i<_response.orders.count; i++) {
         OrderHisModel* model = self.response.orders[i];
-        if([self ])
-        
-        
-        [self.addresses addObject:model.addressModel];
-        
-        if (state == 2 || state == 3 || state == 5 || state == 1) {
-            if (!([model.is_quote_request isEqualToString:@"1"] && state == 1)) {
-                [self.data_1 addObject:model];
-            }
-        }else if(state == 4 || state == 0){
-            [self.data_0 addObject:model];
-        }else{
-            if (state == 0 || state == 6) {
-                [self.data_2 addObject:model];
-            }
+        if(![self containsSource:model]){
+            AddressHisModel* hisModel = [[AddressHisModel alloc] init];
+            hisModel.address = model.addressModel.sourceAddress;
+            hisModel.area = model.addressModel.sourceArea;
+            hisModel.city = model.addressModel.sourceCity;
+            hisModel.landmark = model.addressModel.sourceLandMark;
+            hisModel.pincode = model.addressModel.sourcePinCode;
+            hisModel.phone = model.addressModel.sourcePhonoe;
+            hisModel.lat = model.addressModel.sourceLat;
+            hisModel.lng = model.addressModel.sourceLng;
+            hisModel.state = model.addressModel.sourceState;
+            hisModel.name = model.addressModel.senderName;
+            hisModel.instruction = model.addressModel.sourceInstruction;
+            [self.addresses addObject:hisModel];
         }
-    }
-    [self sortData:self.data_0];
-    [self sortData:self.data_1];
-    [self sortData:self.data_2];
+        
+        if(![self containsDes:model]){
+            AddressHisModel* hisModel = [[AddressHisModel alloc] init];
+            hisModel.address = model.addressModel.desAddress;
+            hisModel.area = model.addressModel.desArea;
+            hisModel.city = model.addressModel.desCity;
+            hisModel.landmark = model.addressModel.desLandMark;
+            hisModel.pincode = model.addressModel.desPinCode;
+            hisModel.phone = model.addressModel.desPhone;
+            hisModel.lat = model.addressModel.desLat;
+            hisModel.lng = model.addressModel.desLng;
+            hisModel.state = model.addressModel.desState;
+            hisModel.name = model.addressModel.desName;
+            hisModel.instruction = model.addressModel.desInstruction;
+            [self.addresses addObject:hisModel];
+            
+        }
     
-    if(self.param1 == 1){
-        [self.segControl setSelectedSegmentIndex:1];
-        self.curPage = 1;
-    }else{
-        [self.segControl setSelectedSegmentIndex:0];
-        self.curPage = 0;
     }
-    //    [self addViews:self.data_0 Parent:self.viewRoot1];
-    //    self.stackAdded_0 = true;
-    //    [self addViews:self.data_1 Parent:self.viewRoot2];
-    //    [self addViews:self.data_2 Parent:self.viewRoot3];
     
-    if (self.data_0.count == 0 && self.data_1.count == 0 && self.data_2.count == 0) {
-        [CGlobal stopIndicator:self];
-        [CGlobal AlertMessage:@"No Orders" Title:nil];
-    }
+   //// [self sortData:self.addresses];
+   
+
+
 }
 
 
@@ -153,8 +181,9 @@
     self.views = [[NSMutableArray alloc] init];
     
     ViewScrollContainer* scrollContainer = (ViewScrollContainer*)[[NSBundle mainBundle] loadNibNamed:@"ViewScrollContainer" owner:self options:nil][0];
-    for (int i=0; i<self.response.orders.count; i++) {
-        QuoteModel*model = self.response.orders[i];
+    for (int i=0; i<self.addresses.count; i++) {
+        
+        AddressHisModel*model = self.addresses[i];
         QuoteItemView* itemView = (QuoteItemView*)[[NSBundle mainBundle] loadNibNamed:@"QuoteItemView" owner:self options:nil][0];
         [itemView firstProcess:i Data:model VC:self];
         

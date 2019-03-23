@@ -20,7 +20,6 @@
 @property (nonatomic,copy) NSString* term;
 @property (nonatomic,copy) NSString* policy;
 @property (nonatomic,copy) NSMutableArray* address;
-xxx
 @property (nonatomic,copy) NSString* action;
 
 @property (nonatomic,assign) long temp;

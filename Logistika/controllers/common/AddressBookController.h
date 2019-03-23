@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property(nonatomic,strong) NSMutableArray* addresses;
+@property (weak, nonatomic) IBOutlet UIView *viewRoot;
 
 @end
 

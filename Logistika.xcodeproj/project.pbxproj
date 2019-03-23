@@ -16,6 +16,7 @@
 		108782E1204FE94F00362428 /* CustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 108782E0204FE94F00362428 /* CustomSwitch.m */; };
 		10E90519206E455300CDAD7D /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E90518206E455300CDAD7D /* CustomScrollView.m */; };
 		10E9051C206E472F00CDAD7D /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9051B206E472F00CDAD7D /* CustomTableView.m */; };
+		1611B373224674B1000CF74D /* AddressHisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1611B372224674B1000CF74D /* AddressHisModel.m */; };
 		1624BAA82245485700B9FFC9 /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624BAA72245485700B9FFC9 /* AddressBookController.m */; };
 		1624BAAE224551A200B9FFC9 /* AddressBookItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1624BAAD224551A200B9FFC9 /* AddressBookItem.xib */; };
 		1624BAB1224620FD00B9FFC9 /* AddressBookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624BAB0224620FD00B9FFC9 /* AddressBookItem.m */; };
@@ -366,6 +367,8 @@
 		10E90518206E455300CDAD7D /* CustomScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomScrollView.m; sourceTree = "<group>"; };
 		10E9051A206E472F00CDAD7D /* CustomTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableView.h; sourceTree = "<group>"; };
 		10E9051B206E472F00CDAD7D /* CustomTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
+		1611B371224674B1000CF74D /* AddressHisModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressHisModel.h; sourceTree = "<group>"; };
+		1611B372224674B1000CF74D /* AddressHisModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressHisModel.m; sourceTree = "<group>"; };
 		1624BAA62245485700B9FFC9 /* AddressBookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookController.h; sourceTree = "<group>"; };
 		1624BAA72245485700B9FFC9 /* AddressBookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookController.m; sourceTree = "<group>"; };
 		1624BAAD224551A200B9FFC9 /* AddressBookItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookItem.xib; sourceTree = "<group>"; };
@@ -1554,6 +1557,8 @@
 				4D94DB7E1EFA245B00BB0638 /* OrderTrackModel.m */,
 				4D46C27C1F75431A007EAC58 /* CityModel.h */,
 				4D46C27D1F75431A007EAC58 /* CityModel.m */,
+				1611B371224674B1000CF74D /* AddressHisModel.h */,
+				1611B372224674B1000CF74D /* AddressHisModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2097,6 +2102,7 @@
 				4D8CAB161EA7A2C5001BCF17 /* PriceType.m in Sources */,
 				4DDDACAC1EE93F2000AFF452 /* MenuItem.m in Sources */,
 				4DE22DB51F69239600C45671 /* StatViewController.m in Sources */,
+				1611B373224674B1000CF74D /* AddressHisModel.m in Sources */,
 				4DA31B691EB099B7006A4AFD /* SelectPackageViewController.m in Sources */,
 				4D126C681EA5AA4500C69B89 /* NSString+Common.m in Sources */,
 				4D31EEA71EAB9E0900D21CBF /* ProfileViewController.m in Sources */,

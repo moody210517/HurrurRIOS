@@ -885,7 +885,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hi2-wr-0EV">
                                 <rect key="frame" x="0.0" y="130" width="375" height="482"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="66a-oF-HG9">
+                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="66a-oF-HG9">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="482"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
@@ -931,6 +931,9 @@
                             <constraint firstItem="MFs-LB-wHI" firstAttribute="leading" secondItem="EZa-B9-id8" secondAttribute="leading" id="qtZ-bL-Yt0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="viewRoot" destination="Hi2-wr-0EV" id="4NY-17-5pm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLd-Hz-NNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4839,7 +4842,7 @@ before our associate leaves for Pickup</string>
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INDIVIDUAL USER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWR-b3-5HS">
-                                                                <rect key="frame" x="113" y="14" width="148" height="22"/>
+                                                                <rect key="frame" x="114" y="14.5" width="147.5" height="21.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
