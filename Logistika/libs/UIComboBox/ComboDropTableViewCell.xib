@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ComboDropTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJN-Bk-vBz">
+                        <rect key="frame" x="2" y="2" width="316" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOR-HV-yS4">
+                                <rect key="frame" x="4" y="9" width="308" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="uOR-HV-yS4" secondAttribute="trailing" constant="4" id="GIo-gq-Fm2"/>
+                            <constraint firstItem="uOR-HV-yS4" firstAttribute="leading" secondItem="EJN-Bk-vBz" secondAttribute="leading" constant="4" id="POe-6C-X87"/>
+                            <constraint firstItem="uOR-HV-yS4" firstAttribute="centerY" secondItem="EJN-Bk-vBz" secondAttribute="centerY" id="YMs-Oj-atq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="EJN-Bk-vBz" secondAttribute="trailing" constant="2" id="1LP-Hf-XG8"/>
+                    <constraint firstAttribute="bottom" secondItem="EJN-Bk-vBz" secondAttribute="bottom" constant="2" id="En6-j6-g0X"/>
+                    <constraint firstItem="EJN-Bk-vBz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="Rbr-ol-S8W"/>
+                    <constraint firstItem="EJN-Bk-vBz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="XJh-SU-CfO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="label" destination="uOR-HV-yS4" id="xlV-Xp-Qrc"/>
+                <outlet property="root" destination="EJN-Bk-vBz" id="yhz-Ep-hi1"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

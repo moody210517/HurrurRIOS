@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w4g-ar-uLL" customClass="SelectImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RRj-VY-qmQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awe-NI-myG">
+                    <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                    <connections>
+                        <action selector="tapImage:" destination="w4g-ar-uLL" eventType="touchUpInside" id="sPO-IX-lIH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mh-Nt-iSY">
+                    <rect key="frame" x="349" y="2" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="ZcP-95-rhb"/>
+                        <constraint firstAttribute="width" constant="24" id="g6s-fO-TQi"/>
+                    </constraints>
+                    <state key="normal" image="ic_clear.png"/>
+                    <connections>
+                        <action selector="onClose:" destination="w4g-ar-uLL" eventType="touchUpInside" id="fls-yM-FF2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Awe-NI-myG" secondAttribute="trailing" id="5AQ-eY-nZu"/>
+                <constraint firstAttribute="width" constant="85" id="9IM-yH-emQ"/>
+                <constraint firstAttribute="bottom" secondItem="Awe-NI-myG" secondAttribute="bottom" id="CPs-dS-O7f"/>
+                <constraint firstAttribute="bottom" secondItem="RRj-VY-qmQ" secondAttribute="bottom" id="Goy-CI-9VR"/>
+                <constraint firstAttribute="trailing" secondItem="RRj-VY-qmQ" secondAttribute="trailing" id="Qwa-dp-oVZ"/>
+                <constraint firstItem="Awe-NI-myG" firstAttribute="leading" secondItem="w4g-ar-uLL" secondAttribute="leading" id="SaC-HQ-gAK"/>
+                <constraint firstAttribute="height" constant="85" id="UQo-wQ-BOd"/>
+                <constraint firstItem="2mh-Nt-iSY" firstAttribute="top" secondItem="w4g-ar-uLL" secondAttribute="top" constant="2" id="cWz-UK-nfQ"/>
+                <constraint firstItem="RRj-VY-qmQ" firstAttribute="leading" secondItem="w4g-ar-uLL" secondAttribute="leading" id="qNL-6b-CAg"/>
+                <constraint firstItem="RRj-VY-qmQ" firstAttribute="top" secondItem="w4g-ar-uLL" secondAttribute="top" id="tGH-1c-te8"/>
+                <constraint firstAttribute="trailing" secondItem="2mh-Nt-iSY" secondAttribute="trailing" constant="2" id="ueA-Fm-0ny"/>
+                <constraint firstItem="Awe-NI-myG" firstAttribute="top" secondItem="w4g-ar-uLL" secondAttribute="top" constant="30" id="vKg-91-LlN"/>
+            </constraints>
+            <connections>
+                <outlet property="btnClose" destination="2mh-Nt-iSY" id="fqe-5F-UHV"/>
+                <outlet property="imgContent" destination="RRj-VY-qmQ" id="kLi-67-0M3"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_clear.png" width="64" height="64"/>
+    </resources>
+</document>

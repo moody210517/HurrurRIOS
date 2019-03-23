@@ -1,0 +1,51 @@
+/* 
+  string.strings
+  Logistika
+
+  Created by BoHuang on 4/22/17.
+  Copyright © 2017 BoHuang. All rights reserved.
+*/
+
+"app_deliver" = "An App that Delivers";
+
+"try_again" = "We don\'t recognize that email or Password. \nPlease try again";
+
+"reset_password" = "Reset your Password";
+"recognize_email" = "We don\'t recognize that email and security answer combination.";
+"recognize_email_hint" = "Please enter your user name, which is the email address you";
+"food" = "What is your Favorite Food?";
+"food_hint" = "Security Answer";
+"recovery_email" = "Recovery Email Sent";
+"recovery_email_content" = "Thank You. Please check your email for your temporary password If you do not receive an email in 10 minutes, please call Customer Service at 999xxxxqqq";
+
+"forgot_user" = "Forgot User Name";
+"recognize_phone" = "We don\'t recognize that phone number and security answer combination \nPlease try again";
+"recognize_phone_hint" = "Please enter your Phone Number";
+"text_message" = "Text Message Sent";
+"text_message_content" = "Thank You. Pleasse check your messages on the phone number entered If you do not receive a text message with login directions in 10 minutes. Please call Customer Service at 8888xxxxqqqq";
+
+"email_corporation" = "Thank You. An email will be sent to the email address provided . If you do not receive on email within 1 hour. Please call Customer SErvice at 8888xxxxqqqq";
+
+"upload_more" = "<u>Upload More Items</u>";
+"add_more" = "<u>Add More Items</u>";
+"add_more_package" = "<u>Add More</u>";
+
+"dialog_address_details" = "A quote will be sent to your registered email address in 30 minutes";
+"camera_alert" = "The total weight in your order exceeds 10Kgs and our current delivery model for this option only accepts less than 10Kgs. Please continue to provide the Address details and submit A quote will be sent to your registered email address within 30 minutes";
+"carmera_alert_guest" = "The total weight in your order exceeds 10Kgs and Our current delivery model for this option only accepts Orders less than 10 Kgs. Please Sign up to get a quote.";
+
+"camera_alarm" = "Take a picture in a good light environment where the object is centered in the picture. Offensive images will lead to uploader being blocked from application. Order Pick up will be upon review of the uploaded images.";
+
+
+"input_all" = "Please enter all info";
+"from_profile" = "<u>Choose from Profile</u>";
+"loading" = "Loading ";
+
+
+"success" = "Success";
+"failed" = "Fail";
+
+"quote_message" = "Thank you. A quote will be sent to your registered email address in 30 minutes.";
+"password_error" = "We didn’t find the details in our records. Please try again";
+
+"msg_track" = "Tracking number not found in our records";

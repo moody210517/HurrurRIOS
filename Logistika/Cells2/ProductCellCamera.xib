@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductCellCamera">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G4z-D4-DP4">
+                    <rect key="frame" x="8" y="8" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="PN1-nw-ZeE"/>
+                        <constraint firstAttribute="width" constant="60" id="o9x-fF-mbd"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Po-va-5xG" customClass="UIComboBox">
+                    <rect key="frame" x="128.5" y="23" width="90" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="4Vm-O2-62Z"/>
+                        <constraint firstAttribute="width" constant="90" id="KBq-vI-8cd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raW-yd-qb3" customClass="UIComboBox">
+                    <rect key="frame" x="249" y="23" width="90" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="suT-xC-PrF"/>
+                        <constraint firstAttribute="width" constant="90" id="u7G-bT-bCb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9F-2q-TOO">
+                    <rect key="frame" x="280" y="64" width="55" height="30"/>
+                    <state key="normal" title="Remove">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="x9F-2q-TOO" secondAttribute="bottom" constant="6" id="3iz-ad-f3S"/>
+                <constraint firstItem="3Po-va-5xG" firstAttribute="centerY" secondItem="G4z-D4-DP4" secondAttribute="centerY" id="8v5-wA-XGo"/>
+                <constraint firstItem="G4z-D4-DP4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="JQz-4G-toX"/>
+                <constraint firstAttribute="trailing" secondItem="raW-yd-qb3" secondAttribute="trailing" constant="8" id="Pte-fr-g60"/>
+                <constraint firstItem="G4z-D4-DP4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Qxq-IR-jzu"/>
+                <constraint firstAttribute="trailing" secondItem="x9F-2q-TOO" secondAttribute="trailing" constant="12" id="sCz-nz-MC1"/>
+                <constraint firstItem="raW-yd-qb3" firstAttribute="centerY" secondItem="G4z-D4-DP4" secondAttribute="centerY" id="tBt-zT-bpX"/>
+                <constraint firstItem="3Po-va-5xG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xbe-L4-EJF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnRemove" destination="x9F-2q-TOO" id="1FL-FD-Def"/>
+                <outlet property="cbQuantity" destination="3Po-va-5xG" id="fC8-ib-TrF"/>
+                <outlet property="cbWeight" destination="raW-yd-qb3" id="Ki2-0s-kUD"/>
+                <outlet property="imgContent" destination="G4z-D4-DP4" id="PY1-MJ-Uwh"/>
+            </connections>
+            <point key="canvasLocation" x="10.5" y="-194"/>
+        </view>
+    </objects>
+</document>

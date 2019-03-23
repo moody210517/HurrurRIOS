@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PaymentViewController done:]:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "g_serviceModel.price">
+            </PersistentString>
+            <PersistentString
+               value = "g_addressModel.sourcePhonoe">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__43-[PickupLocationViewController viewDidLoad]_block_invoke:PickupLocationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "g_lastLocation.coordinate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

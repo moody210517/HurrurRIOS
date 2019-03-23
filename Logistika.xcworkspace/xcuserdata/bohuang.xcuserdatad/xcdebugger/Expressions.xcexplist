@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PagerTabStripViewController.updateContent():PagerTabStripViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastSize">
+            </PersistentString>
+            <PersistentString
+               value = "containerView.contentOffset.x">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[InfoView2 getHeight]:InfoView2.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.totalHeight">
+            </PersistentString>
+            <PersistentString
+               value = "scRect.size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[OrderItemView setModelData:VC:]:OrderItemView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "model.orderModel.product_type">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ColoredButton setBackMode:]:ColoredButton.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.titleLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "[self.titleLabel.text uppercaseString]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PaymentViewController done:]:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "g_serviceModel.price">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ButtonBarPagerTabStripViewController.collectionView(_:didSelectItemAt:):ButtonBarPagerTabStripViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.item">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PaymentViewController viewWillAppear:]:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "curPaymentWay">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CAAutoFillTextField searchAutocompleteEntriesWithSubstring:]:CAAutoFillTextField.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_dataSourceArray.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectPackageViewController addMore:]:SelectPackageViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cameraOrderModel.itemModels[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PaymentViewController goOnlinePayment]:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "curPaymentWay">
+            </PersistentString>
+            <PersistentString
+               value = "selectedRow">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CameraOrderViewController clickContinue:]:CameraOrderViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "g_cameraOrderModel.itemModels[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SelectItemTableViewCell awakeFromNib]:SelectItemTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "tempArray.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__37-[TrackMapViewController viewDidLoad]_block_invoke_2:TrackMapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.packageLocaion">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BorderTextField textField:shouldChangeCharactersInRange:replacementString:]:BorderTextField.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "range.location">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DoneViewController viewDidLoad]:DoneViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "curPaymentWay">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RescheduleViewController tableView:heightForRowAtIndexPath:]:RescheduleViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "model.viewContentHidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RescheduleItemView toggleShow:]:RescheduleItemView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.tableView">
+            </PersistentString>
+            <PersistentString
+               value = "self.data.viewContentHidden">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PaymentViewController order]:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "images.count">
+            </PersistentString>
+            <PersistentString
+               value = "temp.count">
+            </PersistentString>
+            <PersistentString
+               value = "g_packageOrderModel.itemModels[0]">
+            </PersistentString>
+            <PersistentString
+               value = "g_cameraOrderModel.itemModels[0]">
+            </PersistentString>
+            <PersistentString
+               value = "params[@&quot;products&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RescheduleItemView tableView:cellForRowAtIndexPath:]:RescheduleItemView.m">
+      </ContextState>
+      <ContextState
+         contextName = "__30-[PaymentViewController order]_block_invoke:PaymentViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "params">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__58-[PickupLocationViewController getLocationFromCoordinate:]_block_invoke:PickupLocationViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ReviewCameraTableViewCell setData:]:ReviewCameraTableViewCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "OrderFrameViewController.setupView():OrderFrameViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[OrderItemCorView showCarriers]:OrderItemCorView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.data.carrierModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

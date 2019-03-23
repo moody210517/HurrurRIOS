@@ -1,0 +1,85 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - CitrusGraphics (2.1.0)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.7.0):
+    - GoogleMaps (= 2.7.0)
+    - GooglePlaces (= 2.7.0)
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - IQKeyboardManager (4.0.13)
+  - MarqueeLabel (3.1.4):
+    - MarqueeLabel/ObjC (= 3.1.4)
+  - MarqueeLabel/ObjC (3.1.4)
+  - PayUmoney_CoreSDK (3.2)
+  - PayUmoney_PnP (2.2):
+    - CitrusGraphics
+    - PayUmoney_CoreSDK
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - Stripe (13.0.0)
+  - XLPagerTabStrip (8.0.1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - IQKeyboardManager (~> 4.0.9)
+  - MarqueeLabel
+  - PayUmoney_PnP
+  - SDWebImage (~> 3.7)
+  - Stripe
+  - XLPagerTabStrip (~> 8.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CitrusGraphics
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - IQKeyboardManager
+    - MarqueeLabel
+    - PayUmoney_CoreSDK
+    - PayUmoney_PnP
+    - SDWebImage
+    - Stripe
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CitrusGraphics: 21ca86e16760e4226d48f6e2bfbf0d40d5f8c285
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlacePicker: 59ea44db173c58486ad6123993e81feefcbce9c3
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
+  MarqueeLabel: bf768455fe88d427f71476ebb23f9092b660f40b
+  PayUmoney_CoreSDK: cfb8fca58220ce424a37b9d83400efbc411b1d25
+  PayUmoney_PnP: 0aaec816e992fd6b67d34514204f4bc5b0c14388
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  Stripe: 542f2c4493ce31a99fa041fe4973206e8c868f29
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+
+PODFILE CHECKSUM: 49796679897f974c28a4e21b3ad2a0a4a603800e
+
+COCOAPODS: 1.6.0.beta.2
