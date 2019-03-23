@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* phone;
 @property (nonatomic, copy) NSString* landmark;
 @property (nonatomic, copy) NSString* instruction;
-@property (nonatomic, assign) double lat = 0;
-@property (nonatomic, assign)  double lng = 0;
+@property (nonatomic, assign) double lat;
+@property (nonatomic, assign) double lng;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dict;
 

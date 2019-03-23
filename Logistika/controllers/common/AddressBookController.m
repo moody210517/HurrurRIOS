@@ -10,10 +10,17 @@
 #import "OrderHisModel.h"
 #import "AddressHisModel.h"
 #import "CGlobal.h"
+#import "NetworkParser.h"
+#import "OrderResponse.h"
+#import "ViewScrollContainer.h"
+#import "MenuViewController.h"
 
 @interface AddressBookController ()
-
+@property(nonatomic,strong) OrderResponse*response;
 @end
+
+
+
 
 @implementation AddressBookController
 
@@ -22,6 +29,7 @@
     // Do any additional setup after loading the view.
     [self loadData];
 }
+
 
 -(void)loadData{
     
@@ -39,11 +47,11 @@
             // succ
             if (dict[@"result" ]!=nil) {
                 if ([dict[@"result"] intValue] == 200) {
-                    [self clearReschedule];
-                    
+//[self clearReschedule];
                     // parse
                     OrderResponse* response = [[OrderResponse alloc] initWithDictionary_his:dict];
                     self.response = response;
+                    
                     if (self.response.orders.count == 0) {
                         
                         [CGlobal stopIndicator:self];
@@ -102,9 +110,7 @@
     int type_complete = 4;
     int type_pending = 2;
     int type_returned = 6;
-    self.data_0 = [[NSMutableArray alloc] init];
-    self.data_1 = [[NSMutableArray alloc] init];
-    self.data_2 = [[NSMutableArray alloc] init];
+    
     for (int i=0; i<_response.orders.count; i++) {
         OrderHisModel* model = self.response.orders[i];
         if(![self containsSource:model]){
@@ -118,7 +124,7 @@
             hisModel.lat = model.addressModel.sourceLat;
             hisModel.lng = model.addressModel.sourceLng;
             hisModel.state = model.addressModel.sourceState;
-            hisModel.name = model.addressModel.senderName;
+            hisModel.name = model.addressModel.sourceName;
             hisModel.instruction = model.addressModel.sourceInstruction;
             [self.addresses addObject:hisModel];
         }
@@ -163,7 +169,7 @@
 
 -(void)addViews{
     // determine area
-    _index = -1;
+    int _index = -1;
     CGRect bound = [[UIScreen mainScreen] bounds];
     CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     CGFloat headerHeight = self.topBarView.constraint_Height.constant;
@@ -178,22 +184,22 @@
     {
         [subview removeFromSuperview];
     }
-    self.views = [[NSMutableArray alloc] init];
+  //  self.views = [[NSMutableArray alloc] init];
     
     ViewScrollContainer* scrollContainer = (ViewScrollContainer*)[[NSBundle mainBundle] loadNibNamed:@"ViewScrollContainer" owner:self options:nil][0];
     for (int i=0; i<self.addresses.count; i++) {
         
-        AddressHisModel*model = self.addresses[i];
-        QuoteItemView* itemView = (QuoteItemView*)[[NSBundle mainBundle] loadNibNamed:@"QuoteItemView" owner:self options:nil][0];
-        [itemView firstProcess:i Data:model VC:self];
-        
-        [scrollContainer addOneView:itemView];
-        
-        [self.views addObject:itemView];
-        
-        if (i == self.response.orders.count - 1) {
-            itemView.viewSeperator.hidden = true;
-        }
+//        AddressHisModel*model = self.addresses[i];
+//        QuoteItemView* itemView = (QuoteItemView*)[[NSBundle mainBundle] loadNibNamed:@"QuoteItemView" owner:self options:nil][0];
+//        [itemView firstProcess:i Data:model VC:self];
+//
+//        [scrollContainer addOneView:itemView];
+//
+//        [self.views addObject:itemView];
+//
+//        if (i == self.response.orders.count - 1) {
+//            itemView.viewSeperator.hidden = true;
+//        }
     }
     
     if (self.response.orders.count>0) {

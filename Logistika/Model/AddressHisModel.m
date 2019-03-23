@@ -22,12 +22,12 @@
             self.city = dict[@"city"];
             self.state = dict[@"state"];
             self.pincode = dict[@"pincode"];
-            self.phone = dict[@"s_instruction"];
-            self.landmark = dict[@"s_area"];
+            self.phone = dict[@"phone"];
+            self.landmark = dict[@"landmark"];
             
             self.instruction = dict[@"d_address"];
-            self.lat = dict[@"d_city"];
-            self.lng = dict[@"d_state"];
+            self.lat = [dict[@"lat"] doubleValue];
+            self.lng = [dict[@"lng"] doubleValue];
             
             
             [self checkValueForView];
@@ -37,7 +37,7 @@
 }
 -(void)checkValueForView{
     if(self.instruction == [NSNull null]){
-        self.desInstruction = @" ";
+        self.instruction = @" ";
     }else if ([self.instruction length]>0) {
         //ok
     }else{

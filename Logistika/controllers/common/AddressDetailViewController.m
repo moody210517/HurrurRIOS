@@ -936,22 +936,44 @@
     }
 }
 - (IBAction)clickMapPickup:(id)sender {
-    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
-    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
-    vc.type = @"3";
-    dispatch_async(dispatch_get_main_queue(), ^{
-        //[self.navigationController pushViewController:vc animated:true];
-        [self presentViewController:vc animated:true completion:nil];
-    });
+    
+    [self showAddressPicker];
+//    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
+//    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
+//    vc.type = @"3";
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        //[self.navigationController pushViewController:vc animated:true];
+//        [self presentViewController:vc animated:true completion:nil];
+//    });
 }
 - (IBAction)clickMapDrop:(id)sender {
-    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
-    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
-    vc.type = @"4";
-    dispatch_async(dispatch_get_main_queue(), ^{
-        //[self.navigationController pushViewController:vc animated:true];
-        [self presentViewController:vc animated:true completion:nil];
-    });
+//    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
+//    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
+//    vc.type = @"4";
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        //[self.navigationController pushViewController:vc animated:true];
+//        [self presentViewController:vc animated:true completion:nil];
+//    });
+}
+
+-(void)showAddressPicker{
+ 
+    
+    UIViewController* vc = self;
+    NSArray* array = [[NSBundle mainBundle] loadNibNamed:@"ViewPhotoFull" owner:vc options:nil];
+    RescheduleDateInput* view = array[1];
+    [view firstProcess:@{@"vc":vc,@"model":self,@"aDelegate":vc,@"view":self}];
+    
+    MyPopupDialog* dialog = [[MyPopupDialog alloc] init];
+    [dialog setup:view backgroundDismiss:true backgroundColor:[UIColor darkGrayColor]];
+    if ([vc isKindOfClass:[OrderFrameViewController class]]) {
+        OrderFrameViewController*vcc = vc;
+        if(vcc.rootVC!=nil)
+            [dialog showPopup:vcc.rootVC.view];
+    }else{
+        [dialog showPopup:vc.view];
+    }
+    
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
