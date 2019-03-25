@@ -11,12 +11,15 @@
 		0CEE42BE220E01F60006A9D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEE42BD220E01F60006A9D1 /* libz.tbd */; };
 		0CEE42C0220E01FD0006A9D1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEE42BF220E01FD0006A9D1 /* MessageUI.framework */; };
 		0CEE42C2220E02070006A9D1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEE42C1220E02070006A9D1 /* SystemConfiguration.framework */; };
+		0CFDDA822246A56F00372639 /* AddressChooser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CFDDA812246A56F00372639 /* AddressChooser.xib */; };
+		0CFDDA882246D07100372639 /* AddressChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CFDDA872246D07100372639 /* AddressChooser.m */; };
 		1031BFBD2032CFC500A05D46 /* ic_action_done_38.png in Resources */ = {isa = PBXBuildFile; fileRef = 1031BFBC2032CFC400A05D46 /* ic_action_done_38.png */; };
 		10374A5A1FC2CE40000A96EF /* ReturnDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10374A591FC2CE40000A96EF /* ReturnDelegate.m */; };
 		108782E1204FE94F00362428 /* CustomSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 108782E0204FE94F00362428 /* CustomSwitch.m */; };
 		10E90519206E455300CDAD7D /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E90518206E455300CDAD7D /* CustomScrollView.m */; };
 		10E9051C206E472F00CDAD7D /* CustomTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9051B206E472F00CDAD7D /* CustomTableView.m */; };
 		1611B373224674B1000CF74D /* AddressHisModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1611B372224674B1000CF74D /* AddressHisModel.m */; };
+		1611B375224697E5000CF74D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1611B374224697E5000CF74D /* GoogleService-Info.plist */; };
 		1624BAA82245485700B9FFC9 /* AddressBookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624BAA72245485700B9FFC9 /* AddressBookController.m */; };
 		1624BAAE224551A200B9FFC9 /* AddressBookItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1624BAAD224551A200B9FFC9 /* AddressBookItem.xib */; };
 		1624BAB1224620FD00B9FFC9 /* AddressBookItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1624BAB0224620FD00B9FFC9 /* AddressBookItem.m */; };
@@ -358,6 +361,9 @@
 		0CEE42BD220E01F60006A9D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0CEE42BF220E01FD0006A9D1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0CEE42C1220E02070006A9D1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0CFDDA812246A56F00372639 /* AddressChooser.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressChooser.xib; sourceTree = "<group>"; };
+		0CFDDA862246D07100372639 /* AddressChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressChooser.h; sourceTree = "<group>"; };
+		0CFDDA872246D07100372639 /* AddressChooser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressChooser.m; sourceTree = "<group>"; };
 		1031BFBC2032CFC400A05D46 /* ic_action_done_38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_done_38.png; sourceTree = "<group>"; };
 		10374A581FC2CE40000A96EF /* ReturnDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturnDelegate.h; sourceTree = "<group>"; };
 		10374A591FC2CE40000A96EF /* ReturnDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReturnDelegate.m; sourceTree = "<group>"; };
@@ -369,6 +375,7 @@
 		10E9051B206E472F00CDAD7D /* CustomTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableView.m; sourceTree = "<group>"; };
 		1611B371224674B1000CF74D /* AddressHisModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressHisModel.h; sourceTree = "<group>"; };
 		1611B372224674B1000CF74D /* AddressHisModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressHisModel.m; sourceTree = "<group>"; };
+		1611B374224697E5000CF74D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1624BAA62245485700B9FFC9 /* AddressBookController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressBookController.h; sourceTree = "<group>"; };
 		1624BAA72245485700B9FFC9 /* AddressBookController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookController.m; sourceTree = "<group>"; };
 		1624BAAD224551A200B9FFC9 /* AddressBookItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressBookItem.xib; sourceTree = "<group>"; };
@@ -960,6 +967,7 @@
 				4D126BB61EA5AA2700C69B89 /* Assets.xcassets */,
 				4D126BB81EA5AA2700C69B89 /* LaunchScreen.storyboard */,
 				4D126BBB1EA5AA2700C69B89 /* Info.plist */,
+				1611B374224697E5000CF74D /* GoogleService-Info.plist */,
 				4D77F6301EAB60000081689D /* Localizable.strings */,
 				4DDDAC771EE8011900AFF452 /* AutoCompleteTextField */,
 				4D3F92EE1EA8EB4E00821456 /* assets */,
@@ -1078,6 +1086,9 @@
 				4D3C56C020F5BB7600B30FB8 /* OrderFrameContainer.m */,
 				4DE6459920F7B91B00EF3B3C /* MyWebView.h */,
 				4DE6459A20F7B91B00EF3B3C /* MyWebView.m */,
+				0CFDDA812246A56F00372639 /* AddressChooser.xib */,
+				0CFDDA862246D07100372639 /* AddressChooser.h */,
+				0CFDDA872246D07100372639 /* AddressChooser.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -1925,6 +1936,7 @@
 				4D29068920EE7ED6007E0856 /* myswipe1.png in Resources */,
 				4D8CAB2E1EA7BF62001BCF17 /* LICENSE in Resources */,
 				4D126CAF1EA5ABC700C69B89 /* down.png in Resources */,
+				0CFDDA822246A56F00372639 /* AddressChooser.xib in Resources */,
 				4DD572351F756B6E00EC7924 /* CitySelectTableViewCell.xib in Resources */,
 				4D126C7D1EA5AA4500C69B89 /* combobox_up@2x.png in Resources */,
 				4D8CAB661EA8B272001BCF17 /* ELCAssetTablePicker.xib in Resources */,
@@ -1936,6 +1948,7 @@
 				4D126CB41EA5ABC700C69B89 /* ic_home_teal.png in Resources */,
 				4DC370E4204A8800000533E3 /* ic_icon_map_marker.png in Resources */,
 				4D8CAB641EA8B272001BCF17 /* ELCAlbumPickerController.xib in Resources */,
+				1611B375224697E5000CF74D /* GoogleService-Info.plist in Resources */,
 				4D29067E20EE54A6007E0856 /* ic_email.png in Resources */,
 				4D126CB21EA5ABC700C69B89 /* ic_flag_white_24dp.png in Resources */,
 				4DA31B891EB1DBDB006A4AFD /* ViewScrollContainer.xib in Resources */,
@@ -2023,6 +2036,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-Logistika/Pods-Logistika-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${PODS_ROOT}/CitrusGraphics/Framework/graphics-sdk/CitrusGraphics.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${PODS_ROOT}/PayUmoney_CoreSDK/CoreSDK/PayUMoneyCoreSDK.framework",
@@ -2030,11 +2044,13 @@
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CitrusGraphics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PayUMoneyCoreSDK.framework",
@@ -2042,6 +2058,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2268,6 +2285,7 @@
 				4D8CAB131EA7A2B2001BCF17 /* OrderRescheduleModel.m in Sources */,
 				4D8CAB1C1EA7A31C001BCF17 /* QuoteModel.m in Sources */,
 				4D8CAB5E1EA8B272001BCF17 /* ELCAsset.m in Sources */,
+				0CFDDA882246D07100372639 /* AddressChooser.m in Sources */,
 				4D863CF31EFBF68C000B06E5 /* BaseTableViewCell.m in Sources */,
 				4D126C821EA5AA4500C69B89 /* WNAActivityIndicator.m in Sources */,
 				4D126C8B1EA5AA4500C69B89 /* GooglePlace.m in Sources */,

@@ -15,6 +15,7 @@
 #import "ViewScrollContainer.h"
 #import "MenuViewController.h"
 
+
 @interface AddressBookController ()
 @property(nonatomic,strong) OrderResponse*response;
 @end
@@ -142,16 +143,10 @@
             hisModel.state = model.addressModel.desState;
             hisModel.name = model.addressModel.desName;
             hisModel.instruction = model.addressModel.desInstruction;
-            [self.addresses addObject:hisModel];
-            
+            [self.addresses addObject:hisModel];            
         }
-    
     }
-    
    //// [self sortData:self.addresses];
-   
-
-
 }
 
 
@@ -172,7 +167,7 @@
     int _index = -1;
     CGRect bound = [[UIScreen mainScreen] bounds];
     CGFloat statusHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-    CGFloat headerHeight = self.topBarView.constraint_Height.constant;
+    CGFloat headerHeight = 55;// self.topBarView.constraint_Height.constant;
     CGFloat topSpace = statusHeight+headerHeight+50;
     CGRect rect = CGRectMake(0, topSpace, bound.size.width, bound.size.height - topSpace);
     

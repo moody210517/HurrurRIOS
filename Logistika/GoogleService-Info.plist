@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>888364645744-asqs3t7k4838inp5350qo18gdce24eci.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.888364645744-asqs3t7k4838inp5350qo18gdce24eci</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAC3HvISe8cQDAGlSotao7rA1D9XuMXKT0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>888364645744</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hurryr.customer</string>
+	<key>PROJECT_ID</key>
+	<string>hurryr-1539021001776</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hurryr-1539021001776.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:888364645744:ios:eeb293a97cb9a92f</string>
+	<key>DATABASE_URL</key>
+	<string>https://hurryr-1539021001776.firebaseio.com</string>
+</dict>
+</plist>

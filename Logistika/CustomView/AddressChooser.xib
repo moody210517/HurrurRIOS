@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddressChooser">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-Y1-eMe">
+                    <rect key="frame" x="0.0" y="0.0" width="385" height="160"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zcF-zN-jf6" customClass="ColoredButton">
+                            <rect key="frame" x="0.0" y="60" width="173.5" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Pxt-ed-4lI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="My Address"/>
+                            <connections>
+                                <action selector="btnMyAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="NcQ-Na-Z5o"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddressChooser" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M0y-gj-Osv" customClass="ColoredButton">
+                            <rect key="frame" x="173.5" y="60" width="192.5" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4fR-Nd-Zo7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select a new Address"/>
+                            <connections>
+                                <action selector="btnSelectNewAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="l50-SU-4sx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="1PE-k3-cRA"/>
+                        <constraint firstItem="zcF-zN-jf6" firstAttribute="width" secondItem="uCB-Y1-eMe" secondAttribute="width" multiplier="0.45" id="37x-4q-20g"/>
+                        <constraint firstItem="M0y-gj-Osv" firstAttribute="centerY" secondItem="uCB-Y1-eMe" secondAttribute="centerY" id="Ar6-kb-I8v"/>
+                        <constraint firstItem="zcF-zN-jf6" firstAttribute="centerY" secondItem="uCB-Y1-eMe" secondAttribute="centerY" id="BXo-qr-Mwf"/>
+                        <constraint firstItem="zcF-zN-jf6" firstAttribute="leading" secondItem="uCB-Y1-eMe" secondAttribute="leading" id="QIn-fv-jWR"/>
+                        <constraint firstItem="M0y-gj-Osv" firstAttribute="leading" secondItem="zcF-zN-jf6" secondAttribute="trailing" id="lIJ-Gw-tBc"/>
+                        <constraint firstItem="M0y-gj-Osv" firstAttribute="width" secondItem="uCB-Y1-eMe" secondAttribute="width" multiplier="0.5" id="zBF-J2-e0Z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uCB-Y1-eMe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0Sw-Yv-62g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uCB-Y1-eMe" secondAttribute="trailing" id="7vB-FC-UFc"/>
+                <constraint firstItem="uCB-Y1-eMe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Al7-fu-7j0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                    <integer key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="-207.19999999999999" y="-31.484257871064472"/>
+        </view>
+    </objects>
+</document>

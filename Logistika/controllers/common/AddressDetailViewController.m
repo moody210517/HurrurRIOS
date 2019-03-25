@@ -27,27 +27,17 @@
 @property (nonatomic,strong) AddressModel * addressModel;
 
 @property (nonatomic,assign) int address_savestatus;
+@property (nonatomic,strong) OrderResponse*response;
 @end
 
 @implementation AddressDetailViewController{
     IQKeyboardReturnKeyHandler* handler;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // TODO: Remove this
-    
-    // TMP
-    
-//    self.txtPickLandMark.text = @"123";
-//    self.txtPickPhone.text = @"9144460003";
-//    
-//    self.txtDesName.text = @"Test";
-//    self.txtDesPhone.text = @"9144460003";
-//    self.txtDesLandMark.text = @"123";
-    
-    // END
+
     if([self.type isEqualToString:@"exceed"]){
         self.lblChooseSource.text = @"Enter the address of pickup business place";
     }else{
@@ -937,7 +927,12 @@
 }
 - (IBAction)clickMapPickup:(id)sender {
     
-    [self showAddressPicker];
+    if(g_orderHisModels.count == 0){
+        [self getOrderHistory:@"source"];
+    }else{
+        [self showAddressPicker:@"source"];
+    }
+    
 //    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
 //    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
 //    vc.type = @"3";
@@ -947,6 +942,13 @@
 //    });
 }
 - (IBAction)clickMapDrop:(id)sender {
+    
+    if(g_orderHisModels.count == 0){
+        [self getOrderHistory:@"destination"];
+    }else{
+        [self showAddressPicker:@"destination"];
+    }
+    
 //    UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
 //    PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];
 //    vc.type = @"4";
@@ -956,13 +958,14 @@
 //    });
 }
 
--(void)showAddressPicker{
- 
+-(void)showAddressPicker:(NSString*)type{
     
     UIViewController* vc = self;
-    NSArray* array = [[NSBundle mainBundle] loadNibNamed:@"ViewPhotoFull" owner:vc options:nil];
-    RescheduleDateInput* view = array[1];
-    [view firstProcess:@{@"vc":vc,@"model":self,@"aDelegate":vc,@"view":self}];
+    NSArray* array = [[NSBundle mainBundle] loadNibNamed:@"AddressChooser" owner:vc options:nil];
+    
+    RescheduleDateInput* view = array[0];
+    
+    [view firstProcess:@{@"vc":vc,@"view":self,@"type":type}];
     
     MyPopupDialog* dialog = [[MyPopupDialog alloc] init];
     [dialog setup:view backgroundDismiss:true backgroundColor:[UIColor darkGrayColor]];
@@ -973,8 +976,53 @@
     }else{
         [dialog showPopup:vc.view];
     }
-    
 }
+
+-(void)getOrderHistory:(NSString*)type{
+    NSMutableDictionary* params = [[NSMutableDictionary alloc] init];
+    EnvVar* env = [CGlobal sharedId].env;
+    if (env.mode == c_PERSONAL) {
+        params[@"user_id"] = env.user_id;
+    }else if(env.mode == c_CORPERATION){
+        params[@"user_id"] = env.corporate_user_id;
+    }
+    NetworkParser* manager = [NetworkParser sharedManager];
+    [CGlobal showIndicator:self];
+    [manager ontemplateGeneralRequest2:params BasePath:BASE_URL_ORDER Path:@"get_orders_his" withCompletionBlock:^(NSDictionary *dict, NSError *error) {
+        if (error == nil) {
+            // succ
+            if (dict[@"result" ]!=nil) {
+                if ([dict[@"result"] intValue] == 200) {
+                    [self clearReschedule];
+                    // parse
+                    OrderResponse* response = [[OrderResponse alloc] initWithDictionary_his:dict];
+                    self.response = response;
+                    if (self.response.orders.count == 0) {
+                        [CGlobal stopIndicator:self];
+                        [CGlobal AlertMessage:@"No Orders" Title:nil];
+                    }else{
+                        [CGlobal stopIndicator:self];
+                    }
+                    [self showAddressPicker:type];
+                    return;
+                }
+                [self showAddressPicker:type];
+            }
+        }else{
+            // error
+            NSLog(@"Error");
+        }
+        [CGlobal AlertMessage:@"No Orders" Title:nil];
+        [CGlobal stopIndicator:self];
+    } method:@"POST"];
+}
+
+
+
+-(void)clearReschedule{
+    g_orderHisModels = [[NSMutableArray alloc] init];
+}
+
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {

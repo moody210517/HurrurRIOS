@@ -19,4 +19,5 @@ pod 'GoogleMaps'
 pod 'MarqueeLabel'
 pod 'PayUmoney_PnP'
 pod 'XLPagerTabStrip', '~> 8.0'
+pod 'Firebase/Core'
 end

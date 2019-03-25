@@ -18,4 +18,5 @@ pod 'GooglePlacePicker'
 pod 'GoogleMaps'
 pod 'MarqueeLabel'
 pod 'PayUmoney_PnP'
+pod 'Firebase/Core'
 end

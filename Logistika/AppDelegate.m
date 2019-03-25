@@ -13,7 +13,7 @@
 #import "NetworkParser.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import "StatViewController.h"
-
+@import Firebase;
 /*#import <KSCrash/KSCrash.h> // TODO: Remove this
 #import <KSCrash/KSCrashInstallation+Alert.h>
 #import <KSCrash/KSCrashInstallationStandard.h>
@@ -30,11 +30,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [FIRApp configure];
+    
     [CGlobal initGlobal];
     [self loadBasicData];
     [self initData];
-    
-    
+        
     EnvVar*env = [CGlobal sharedId].env;
     env.lastLogin = -1;
     env.quote = true;
