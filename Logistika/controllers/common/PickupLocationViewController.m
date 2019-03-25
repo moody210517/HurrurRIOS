@@ -245,6 +245,7 @@
         [self dismissViewControllerAnimated:true completion:nil];
     }
 }
+
 -(void)processDone{
     if ([self.area length]>0) {
         //ok

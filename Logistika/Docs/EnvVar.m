@@ -301,6 +301,11 @@ static NSString * kDefaultsLastLoggedInKey = @"LASTLOGGEDIN";
     _last_name = last_name;
     [self saveDefaults:@"last_name" value:last_name];
 }
+-(void)setBusuness_Type:(NSString *)business_type{
+    _business_type = business_type;
+    [self saveDefaults:@"business_type" value:business_type];
+}
+
 @end
 
 

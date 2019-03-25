@@ -153,12 +153,8 @@
                     LoginResponse* data = [[LoginResponse alloc] initWithDictionary:dict];
                     if (data.cities.count > 0) {
                         g_cityModels = data.cities;
-                        
-                        [self fetchSupport];
-                        
+                        [self fetchSupport];                        
                         return;
-                        
-                        
                     }else{
                         [CGlobal AlertMessage:@"Fail" Title:nil];
                     }

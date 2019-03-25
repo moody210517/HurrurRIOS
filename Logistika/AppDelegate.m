@@ -38,7 +38,7 @@
     [self initData];
         
     EnvVar*env = [CGlobal sharedId].env;
-    env.lastLogin = -1;
+    //env.lastLogin = -1;
     env.quote = true;
     g_isii = false;
     g_location_cnt = 0;
@@ -96,7 +96,7 @@
 -(void)defaultIntro{
     
     EnvVar* env = [CGlobal sharedId].env;
-    env.lastLogin = -1;
+    //env.lastLogin = -1;
     
     UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController*vc = [ms instantiateViewControllerWithIdentifier:@"StatViewController"] ;
@@ -108,7 +108,7 @@
 -(void)defaultLogin{
     
     EnvVar* env = [CGlobal sharedId].env;
-    env.lastLogin = -1;
+    //env.lastLogin = -1;
     
     UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController*vc = [ms instantiateViewControllerWithIdentifier:@"CLoginNav"] ;

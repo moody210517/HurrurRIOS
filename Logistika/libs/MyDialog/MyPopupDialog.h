@@ -16,7 +16,6 @@
 @end
 
 @interface MyPopupDialog : UIView
-
 @property (nonatomic,strong) UIView* backgroundview;
 @property (nonatomic,assign) BOOL isShowing;
 @property (nonatomic,weak) id delegate;

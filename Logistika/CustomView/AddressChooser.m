@@ -8,6 +8,9 @@
 
 #import "AddressChooser.h"
 #import "PickupLocationViewController.h"
+#import "AddressBookController.h"
+
+
 
 @implementation AddressChooser
 
@@ -20,10 +23,22 @@
 */
 
 - (IBAction)btnMyAddress:(id)sender {
-    
+        UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
+        AddressBookController* vc = [ms instantiateViewControllerWithIdentifier:@"AddressBookController"];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //[self.navigationController pushViewController:vc animated:true];
+            [self.vc presentViewController:vc animated:true completion:nil];
+        });
 }
 
 - (IBAction)btnSelectNewAddress:(id)sender {
+    //hide view
+    // change page
+  
+    //[self setHidden:true];
+ 
+    [_pDialog dismissPopup];
+    
     if([_type isEqualToString:@"source"] == true){
             UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
             PickupLocationViewController* vc = [ms instantiateViewControllerWithIdentifier:@"PickupLocationViewController"];

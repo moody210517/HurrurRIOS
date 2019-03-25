@@ -17,26 +17,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCB-Y1-eMe">
-                    <rect key="frame" x="0.0" y="0.0" width="385" height="160"/>
+                    <rect key="frame" x="16" y="0.0" width="353" height="160"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="zcF-zN-jf6" customClass="ColoredButton">
-                            <rect key="frame" x="0.0" y="60" width="173.5" height="40"/>
+                            <rect key="frame" x="0.0" y="60" width="141" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Pxt-ed-4lI"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="My Address"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="backMode">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnMyAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="NcQ-Na-Z5o"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AddressChooser" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="M0y-gj-Osv" customClass="ColoredButton">
-                            <rect key="frame" x="173.5" y="60" width="192.5" height="40"/>
+                            <rect key="frame" x="149" y="60" width="204" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="4fR-Nd-Zo7"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="Select a new Address"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="backMode">
+                                    <integer key="value" value="7"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="btnSelectNewAddress:" destination="iN0-l3-epB" eventType="touchUpInside" id="l50-SU-4sx"/>
                             </connections>
@@ -45,19 +55,19 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="160" id="1PE-k3-cRA"/>
-                        <constraint firstItem="zcF-zN-jf6" firstAttribute="width" secondItem="uCB-Y1-eMe" secondAttribute="width" multiplier="0.45" id="37x-4q-20g"/>
+                        <constraint firstItem="zcF-zN-jf6" firstAttribute="width" secondItem="uCB-Y1-eMe" secondAttribute="width" multiplier="0.4" id="37x-4q-20g"/>
                         <constraint firstItem="M0y-gj-Osv" firstAttribute="centerY" secondItem="uCB-Y1-eMe" secondAttribute="centerY" id="Ar6-kb-I8v"/>
                         <constraint firstItem="zcF-zN-jf6" firstAttribute="centerY" secondItem="uCB-Y1-eMe" secondAttribute="centerY" id="BXo-qr-Mwf"/>
                         <constraint firstItem="zcF-zN-jf6" firstAttribute="leading" secondItem="uCB-Y1-eMe" secondAttribute="leading" id="QIn-fv-jWR"/>
-                        <constraint firstItem="M0y-gj-Osv" firstAttribute="leading" secondItem="zcF-zN-jf6" secondAttribute="trailing" id="lIJ-Gw-tBc"/>
-                        <constraint firstItem="M0y-gj-Osv" firstAttribute="width" secondItem="uCB-Y1-eMe" secondAttribute="width" multiplier="0.5" id="zBF-J2-e0Z"/>
+                        <constraint firstAttribute="trailing" secondItem="M0y-gj-Osv" secondAttribute="trailing" id="YZl-0K-Ewr"/>
+                        <constraint firstItem="M0y-gj-Osv" firstAttribute="leading" secondItem="zcF-zN-jf6" secondAttribute="trailing" constant="8" id="lIJ-Gw-tBc"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="uCB-Y1-eMe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0Sw-Yv-62g"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uCB-Y1-eMe" secondAttribute="trailing" id="7vB-FC-UFc"/>
+                <constraint firstItem="uCB-Y1-eMe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="0Sw-Yv-62g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uCB-Y1-eMe" secondAttribute="trailing" constant="16" id="7vB-FC-UFc"/>
                 <constraint firstItem="uCB-Y1-eMe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Al7-fu-7j0"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

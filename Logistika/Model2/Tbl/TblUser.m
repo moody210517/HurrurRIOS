@@ -39,7 +39,6 @@
     TblUser*user = self;
     TblAddress* address = user.address[0];
     if (address!=nil) {
-        
         env.address1 = address.address;
         env.address2 = address.address2;
         env.city = address.city;
@@ -71,6 +70,7 @@
     env.policy = user.policy;
     env.term = user.term;
     env.lastLogin = 1;
+    env.business_type = user.business_type;
 }
 
 @end

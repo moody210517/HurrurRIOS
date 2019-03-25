@@ -66,7 +66,7 @@ bool isPaymentCompleted = false;
     }else{
         c_paymentWay = @[@"Pay using Card",
                          @"Net Banking",
-                         @"Cash on Pick up"];
+                         @"Cash on Pick up",@"COD"];
         selectedRow = 2;
     }
     
@@ -155,7 +155,6 @@ bool isPaymentCompleted = false;
     double price = [g_serviceModel.price doubleValue];
     g_serviceModel.price = [NSString stringWithFormat:@"%.02f",price];
     
- 
     
     [PayUManager proceedForPayment:self
                         withAmount:g_serviceModel.price
@@ -219,7 +218,7 @@ bool isPaymentCompleted = false;
 
 
 -(IBAction)clickContinue:(id)sender {
-    if (selectedRow == 2) {
+    if (selectedRow == 2 || selectedRow == 3) {
         [self showOrderConfirm];
     }else{
         [self goOnlinePayment];

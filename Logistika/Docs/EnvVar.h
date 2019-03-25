@@ -15,6 +15,7 @@
 
 @property (nonatomic, copy) NSString * first_name;
 @property (nonatomic, copy) NSString * last_name;
+@property (nonatomic, copy) NSString * business_type;
 @property (nonatomic, copy) NSString * country;
 @property (nonatomic, assign) long introviewed;
 

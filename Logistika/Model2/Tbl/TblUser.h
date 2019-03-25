@@ -21,6 +21,7 @@
 @property (nonatomic,copy) NSString* policy;
 @property (nonatomic,copy) NSMutableArray* address;
 @property (nonatomic,copy) NSString* action;
+@property (nonatomic,copy) NSString* business_type;
 
 @property (nonatomic,assign) long temp;
 

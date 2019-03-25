@@ -47,6 +47,10 @@
     
     self.txtCholocate.delegate = self;
     
+    
+    if( g_cityModels.count == 0){
+        [self getCity];
+    }
 }
 -(void)blink{
     if(_blinkStatus == NO){
@@ -218,6 +222,37 @@
         g_ORDER_TYPE = g_CAMERA_OPTION;
         [self.navigationController pushViewController:vc animated:true];
     });
+}
+-(void) getCity{
+    NSMutableDictionary* data = [[NSMutableDictionary alloc] init];
+    NetworkParser* manager = [NetworkParser sharedManager];
+    [CGlobal showIndicator:self];
+    [manager ontemplateGeneralRequest2:data BasePath:BASE_DATA_URL Path:@"get_cities" withCompletionBlock:^(NSDictionary *dict, NSError *error) {
+        if (error == nil) {
+            if (dict!=nil && dict[@"result"] != nil) {
+                if ([dict[@"result"] intValue] == 200) {
+                    [CGlobal stopIndicator:self];
+                    
+                    LoginResponse* data = [[LoginResponse alloc] initWithDictionary:dict];
+                    if (data.cities.count > 0) {
+                        g_cityModels = data.cities;
+                        g_cityBounds = [g_cityModels[0] getGeofences];
+                        return;
+                    }else{
+                        [CGlobal AlertMessage:@"Fail" Title:nil];
+                    }
+                    
+                }else{
+                    [CGlobal AlertMessage:@"Fail" Title:nil];
+                }
+                
+                
+            }
+        }else{
+            NSLog(@"Error");
+        }
+        [CGlobal stopIndicator:self];
+    } method:@"POST"];
 }
 
 @end

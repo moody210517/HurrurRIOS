@@ -20,7 +20,7 @@
 #import "IQKeyboardManager.h"
 #import "IQKeyboardReturnKeyHandler.h"
 #import "Logistika-Swift.h"
-
+#import "AddressChooser.h"
 @interface AddressDetailViewController ()
 @property (nonatomic,assign) int distance_apicalls;
 @property (nonatomic,strong) MyTextDelegate * textDelegate;
@@ -89,8 +89,6 @@
         self.viewChooseFromProfile.hidden = true;
         self.viewChooseFromProfile2.hidden = true;
     }
-    
-
     
     
     self.title = @"Address Details";
@@ -963,11 +961,11 @@
     UIViewController* vc = self;
     NSArray* array = [[NSBundle mainBundle] loadNibNamed:@"AddressChooser" owner:vc options:nil];
     
-    RescheduleDateInput* view = array[0];
-    
+    AddressChooser* view = array[0];
     [view firstProcess:@{@"vc":vc,@"view":self,@"type":type}];
     
     MyPopupDialog* dialog = [[MyPopupDialog alloc] init];
+    view.pDialog = dialog;
     [dialog setup:view backgroundDismiss:true backgroundColor:[UIColor darkGrayColor]];
     if ([vc isKindOfClass:[OrderFrameViewController class]]) {
         OrderFrameViewController*vcc = vc;

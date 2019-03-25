@@ -7,7 +7,7 @@
 //
 
 #import "ColoredView.h"
-
+#import "MyPopupDialog.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString* type;
 @property (nonatomic, strong) UIViewController*vc;
+//@property (nonatomic,strong) id<ViewDialogDelegate> aDelegate;
+@property (strong, nonatomic)   MyPopupDialog * pDialog;
 -(void)firstProcess:(NSDictionary*)data;
 
 @end
