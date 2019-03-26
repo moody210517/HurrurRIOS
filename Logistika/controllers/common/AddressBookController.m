@@ -20,15 +20,13 @@
 @property(nonatomic,strong) OrderResponse*response;
 @end
 
-
-
-
 @implementation AddressBookController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.    
     //self.topBarView.caption.text = @"About Us";
+    self.topBarView.btnHome.tag = 202;
     [self loadData];
 }
 

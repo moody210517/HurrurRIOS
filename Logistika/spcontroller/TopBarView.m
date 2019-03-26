@@ -111,6 +111,12 @@
             }
             break;
         }
+        case 202:{
+            if(env.lastLogin >= 0){
+                AppDelegate* delegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
+                [delegate goAddress:self.vc];
+            }
+        }
         default:
             break;
     }

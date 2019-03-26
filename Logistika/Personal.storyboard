@@ -824,7 +824,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcN-5c-vFQ" customClass="TopBarView">
+                            <view tag="200" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QcN-5c-vFQ" customClass="TopBarView">
                                 <rect key="frame" x="0.0" y="20" width="375" height="55"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="M6H-Dn-2lv">
