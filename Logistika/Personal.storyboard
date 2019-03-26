@@ -901,16 +901,35 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u9-bM-sID">
                                 <rect key="frame" x="0.0" y="612" width="375" height="55"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-h4-qlz" customClass="ColoredButton">
-                                        <rect key="frame" x="172" y="12" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-h4-qlz" customClass="ColoredButton">
+                                        <rect key="frame" x="50" y="7.5" width="275" height="40"/>
                                         <accessibility key="accessibilityConfiguration" label="Ok"/>
-                                        <state key="normal" title="Ok"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KYC-mP-93Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Ok">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="level">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="backMode">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadious">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="ESF-h4-qlz" firstAttribute="centerY" secondItem="7u9-bM-sID" secondAttribute="centerY" id="CZt-0b-GBv"/>
+                                    <constraint firstItem="ESF-h4-qlz" firstAttribute="leading" secondItem="7u9-bM-sID" secondAttribute="leading" constant="50" id="YEy-p4-RpV"/>
                                     <constraint firstAttribute="height" constant="55" id="dgc-Cp-IrT"/>
+                                    <constraint firstAttribute="trailing" secondItem="ESF-h4-qlz" secondAttribute="trailing" constant="50" id="ybc-Zy-2BG"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -932,12 +951,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="topBarView" destination="QcN-5c-vFQ" id="fAh-OB-R7B"/>
                         <outlet property="viewRoot" destination="Hi2-wr-0EV" id="4NY-17-5pm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nLd-Hz-NNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541.60000000000002" y="-949.47526236881572"/>
+            <point key="canvasLocation" x="670" y="-1038"/>
         </scene>
         <!--Camera Order View Controller-->
         <scene sceneID="B3I-vX-k8Q">

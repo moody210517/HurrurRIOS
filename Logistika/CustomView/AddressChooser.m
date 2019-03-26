@@ -23,7 +23,7 @@
 */
 
 - (IBAction)btnMyAddress:(id)sender {
-        UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Common" bundle:nil];
+        UIStoryboard* ms = [UIStoryboard storyboardWithName:@"Personal" bundle:nil];
         AddressBookController* vc = [ms instantiateViewControllerWithIdentifier:@"AddressBookController"];
         dispatch_async(dispatch_get_main_queue(), ^{
             //[self.navigationController pushViewController:vc animated:true];
@@ -33,9 +33,6 @@
 
 - (IBAction)btnSelectNewAddress:(id)sender {
     //hide view
-    // change page
-  
-    //[self setHidden:true];
  
     [_pDialog dismissPopup];
     

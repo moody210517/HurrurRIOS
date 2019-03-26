@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BasicViewController.h"
+#import "CAAutoFillTextField.h"
+#import "CAAutoCompleteObject.h"
+#import "MenuViewController.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddressBookController : UIViewController
-
+@interface AddressBookController : MenuViewController
 
 @property(nonatomic,strong) NSMutableArray* addresses;
 @property (weak, nonatomic) IBOutlet UIView *viewRoot;
